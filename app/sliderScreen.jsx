@@ -48,11 +48,11 @@ const SliderScreen = () => {
       <View style={[styles.slide, { backgroundColor: item.backgroundColor }]}>
         <View className="flex justify-center items-center">
           <Image className='w-[148px] h-[50px]' source={require('../assets/images/logo.png')} />
-          <Text className='font-RoundGothic-Text mt-[60px] mb-[10px] text-[22px] text-[#414042]'>{item?.title?.one}</Text>
+          <Text className='font-RoundGothic-Text leading-[22px] mt-[60px] text-[22px] text-[#414042]'>{item?.title?.one}</Text>
           <Text className='font-RoundGothic-Bold leading-[40px] text-[33px] text-[#48CB74]'>{item?.title?.two}</Text>
         </View>
-        <Image className='mt-[60px] w-[90vw] max-w-[350px] max-h-[215px]' source={item.image} />
-        <Text className='mt-[60px] mb-10 text-[15px] font-[400px] text-[#414042] text-center leading-6 tracking-wider'>
+        <Image className='mt-[60px] w-[330px] h-[220px]' source={item.image} />
+        <Text className='font-Poppins-Regular mt-[60px] mb-10 text-[14px] text-[#414042] text-center leading-6 tracking-wider'>
           {item?.description}
         </Text>
       </View>

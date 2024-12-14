@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "nativewind",
+    "name": "Loadup",
     "slug": "nativewind",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.charmi_malakiya2.loadup"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +37,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "8b44e4e3-3a75-44c2-89d4-ad3ccf5d1137"
+      }
     }
   }
 }

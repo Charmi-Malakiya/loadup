@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, TextInput } from "react-native";
 
-const Input = ({
+const MobileInput = ({
   label,
   prefix,
   placeholder,
@@ -13,6 +13,13 @@ const Input = ({
   error = false,
   helperText = "",
 }) => {
+  // Function to handle text input and limit to 10 digits
+  const handleChangeText = (text) => {
+    if (text.length <= 10) {
+      onChangeText(text); // Call the onChangeText passed as a prop only if the text length is <= 10
+    }
+  };
+
   return (
     <View className="w-[90%]">
       {/* Input Container */}
@@ -30,7 +37,7 @@ const Input = ({
           keyboardType={keyboardType}
           placeholderTextColor={placeholderTextColor}
           value={value}
-          onChangeText={onChangeText}
+          onChangeText={handleChangeText} // Use the handleChangeText function here
         />
       </View>
       {/* Helper Text */}
@@ -41,4 +48,4 @@ const Input = ({
   );
 };
 
-export default Input;
+export default MobileInput;
